@@ -1,8 +1,15 @@
 package token
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"if":     IF,
+	"return": RETURN,
+	"true":   TRUE,
+	"false":  FALSE,
+	"else":   ELSE,
+	"==":     EQ,
+	"!=":     NOT_EQ,
 }
 
 func LookupIdent(ident string) TokenType {
@@ -22,8 +29,18 @@ const (
 
 	//OPERATORS
 	//@TODO>
-	ASSIGN = "="
-	PLUS   = "+"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+
+	LT = "<"
+	GT = ">"
+
+	EQ     = "=="
+	NOT_EQ = "!="
 
 	//Delimeters
 	COMMA     = ","
@@ -37,6 +54,12 @@ const (
 	//Keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+
+	TRUE   = "TRUE"
+	FALSE  = "FALSE"
+	IF     = "IF"
+	ELSE   = "ELSE"
+	RETURN = "RETURN"
 )
 
 type TokenType string

@@ -4,8 +4,9 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"monkey/lexer"
-	"monkey/token"
+
+	"github.com/sdrig/compiler-with-go/src/lexer"
+	"github.com/sdrig/compiler-with-go/src/token"
 )
 
 const PROMPT = ">> "
